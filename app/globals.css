@@ -36,10 +36,13 @@
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
   scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -47,6 +50,21 @@ body {
   color: var(--ink);
   font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
   overflow-x: hidden;
+  overscroll-behavior-y: none;
+}
+
+a, button {
+  touch-action: manipulation;
+}
+
+img {
+  -webkit-user-drag: none;
+}
+
+@media (max-width: 640px) {
+  html {
+    scroll-padding-top: 80px;
+  }
 }
 
 ::selection {

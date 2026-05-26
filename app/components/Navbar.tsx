@@ -22,19 +22,27 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
   return (
     <motion.header
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+      style={{ paddingTop: "env(safe-area-inset-top)" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
           ? "bg-cream/85 backdrop-blur-xl border-b border-ink/10"
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-[1600px] mx-auto px-6 md:px-10 flex items-center justify-between h-20 md:h-24">
-        <a href="#top" className="flex items-center group relative h-14 md:h-16 w-[170px] md:w-[200px]">
+      <div className="max-w-[1600px] mx-auto px-5 md:px-10 flex items-center justify-between h-16 md:h-24">
+        <a href="#top" className="flex items-center group relative h-11 md:h-16 w-[150px] md:w-[200px]">
           {/* Dark logo — visible when scrolled */}
           <Image
             src="/logo/logo_paradiso_del_mare.png"
@@ -91,7 +99,7 @@ export default function Navbar() {
 
         <button
           onClick={() => setOpen(true)}
-          className={`lg:hidden p-2 transition-colors duration-500 ${
+          className={`lg:hidden -mr-2 p-3 transition-colors duration-500 ${
             scrolled ? "text-ink" : "text-cream"
           }`}
           aria-label="Apri menu"
@@ -106,27 +114,31 @@ export default function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[60] bg-ink"
+            style={{
+              paddingTop: "env(safe-area-inset-top)",
+              paddingBottom: "env(safe-area-inset-bottom)",
+            }}
+            className="fixed inset-0 z-[60] bg-ink overflow-y-auto"
           >
-            <div className="flex items-center justify-between h-20 px-6">
-              <div className="relative h-14 w-[170px]">
+            <div className="flex items-center justify-between h-16 px-5">
+              <div className="relative h-11 w-[150px]">
                 <Image
                   src="/logo/logo_paradiso_del_mare_bianco.png"
                   alt="Il Paradiso del Mare"
                   fill
-                  sizes="170px"
+                  sizes="150px"
                   className="object-contain object-left"
                 />
               </div>
               <button
                 onClick={() => setOpen(false)}
-                className="p-2 text-cream"
+                className="-mr-2 p-3 text-cream"
                 aria-label="Chiudi menu"
               >
                 <CloseIcon size={26} />
               </button>
             </div>
-            <motion.nav className="flex flex-col px-6 py-10 gap-6">
+            <motion.nav className="flex flex-col px-5 py-8 gap-5">
               {links.map((l, i) => (
                 <motion.a
                   key={l.href}
@@ -135,7 +147,7 @@ export default function Navbar() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.1 + i * 0.07 }}
-                  className="display text-5xl text-cream"
+                  className="display text-4xl sm:text-5xl text-cream py-1"
                 >
                   {l.label}
                 </motion.a>
@@ -146,9 +158,19 @@ export default function Navbar() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5 }}
-                className="mt-6 inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-cream text-ink text-sm uppercase tracking-[0.2em]"
+                className="mt-6 inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-cream text-ink text-sm uppercase tracking-[0.2em] w-full"
               >
                 Prenota un tavolo →
+              </motion.a>
+              <motion.a
+                href="tel:+390000000000"
+                onClick={() => setOpen(false)}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.55 }}
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full border border-cream/30 text-cream text-sm uppercase tracking-[0.2em] w-full"
+              >
+                Chiama ora
               </motion.a>
             </motion.nav>
           </motion.div>

@@ -8,19 +8,19 @@ const tiles = [
     src: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=80",
     alt: "Sala del ristorante",
     caption: "La sala",
-    span: "md:col-span-8 md:row-span-2 h-[420px] md:h-[640px]",
+    span: "md:col-span-8 md:row-span-2 h-[300px] sm:h-[420px] md:h-[640px]",
   },
   {
     src: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80",
     alt: "Dettaglio piatto",
     caption: "Il piatto",
-    span: "md:col-span-4 h-[200px] md:h-[308px]",
+    span: "md:col-span-4 h-[180px] sm:h-[200px] md:h-[308px]",
   },
   {
     src: "https://images.unsplash.com/photo-1506084868230-bb9d95c24759?auto=format&fit=crop&w=1200&q=80",
     alt: "Bicchiere di vino",
     caption: "La cantina",
-    span: "md:col-span-4 h-[200px] md:h-[308px]",
+    span: "md:col-span-4 h-[180px] sm:h-[200px] md:h-[308px]",
   },
 ];
 
@@ -36,10 +36,10 @@ const features = [
 
 export default function Gallery() {
   return (
-    <section id="sala" className="bg-cream-200 py-28 md:py-36">
-      <div className="max-w-[1600px] mx-auto px-6 md:px-10">
+    <section id="sala" className="bg-cream-200 py-20 md:py-36">
+      <div className="max-w-[1600px] mx-auto px-5 md:px-10">
         {/* Header */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-14 md:mb-20 items-end">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-10 mb-10 md:mb-20 items-end">
           <div className="lg:col-span-7">
             <motion.span
               initial={{ opacity: 0 }}
@@ -54,7 +54,7 @@ export default function Gallery() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-              className="display text-ink text-[12vw] md:text-[6vw] lg:text-[5vw] leading-[0.95] mt-3 max-w-3xl"
+              className="display text-ink text-[14vw] sm:text-[12vw] md:text-[6vw] lg:text-[5vw] leading-[0.95] mt-3 max-w-3xl"
             >
               Una sala intima.
             </motion.h2>
@@ -99,7 +99,7 @@ export default function Gallery() {
         </div>
 
         {/* Feature row */}
-        <div className="mt-14 md:mt-20 grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10">
+        <div className="mt-12 md:mt-20 grid grid-cols-2 lg:grid-cols-4 gap-x-5 gap-y-8 md:gap-10">
           {features.map((f, i) => (
             <motion.div
               key={f.title}
@@ -109,10 +109,10 @@ export default function Gallery() {
               transition={{ duration: 0.7, delay: i * 0.07 }}
               className="border-t border-ink/15 pt-5"
             >
-              <h3 className="display text-ink text-2xl md:text-3xl leading-none">
+              <h3 className="display text-ink text-xl md:text-3xl leading-none">
                 {f.title}
               </h3>
-              <p className="mt-3 text-ink/70 text-sm leading-relaxed font-light">
+              <p className="mt-2 md:mt-3 text-ink/70 text-sm leading-relaxed font-light">
                 {f.text}
               </p>
             </motion.div>

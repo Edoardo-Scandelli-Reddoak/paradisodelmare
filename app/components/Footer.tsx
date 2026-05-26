@@ -11,10 +11,14 @@ import {
 
 export default function Footer() {
   return (
-    <footer id="contatti" className="bg-ink text-cream pt-24 pb-10 grain">
-      <div className="max-w-[1600px] mx-auto px-6 md:px-10">
+    <footer
+      id="contatti"
+      style={{ paddingBottom: "calc(env(safe-area-inset-bottom) + 2.5rem)" }}
+      className="bg-ink text-cream pt-16 md:pt-24 grain"
+    >
+      <div className="max-w-[1600px] mx-auto px-5 md:px-10">
         {/* Massive wordmark */}
-        <div className="border-b border-cream/10 pb-10">
+        <div className="border-b border-cream/10 pb-8 md:pb-10">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -28,24 +32,24 @@ export default function Footer() {
           </motion.h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 py-14">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 py-10 md:py-14">
           <div className="md:col-span-5">
             <p className="text-cream/70 leading-relaxed font-light max-w-sm">
               Ristorante pescheria. Una storia di famiglia, tre generazioni a
               contatto con il mare della Liguria.
             </p>
-            <div className="flex items-center gap-4 mt-8">
+            <div className="flex items-center gap-4 mt-6 md:mt-8">
               <a
                 href="#"
                 aria-label="Instagram"
-                className="w-10 h-10 rounded-full border border-cream/20 flex items-center justify-center hover:bg-cream hover:text-ink transition-colors"
+                className="w-11 h-11 rounded-full border border-cream/20 flex items-center justify-center hover:bg-cream hover:text-ink transition-colors"
               >
                 <InstagramIcon size={16} />
               </a>
               <a
                 href="#"
                 aria-label="Facebook"
-                className="w-10 h-10 rounded-full border border-cream/20 flex items-center justify-center hover:bg-cream hover:text-ink transition-colors"
+                className="w-11 h-11 rounded-full border border-cream/20 flex items-center justify-center hover:bg-cream hover:text-ink transition-colors"
               >
                 <FacebookIcon size={16} />
               </a>
@@ -53,7 +57,7 @@ export default function Footer() {
           </div>
 
           <div className="md:col-span-3">
-            <div className="text-[11px] uppercase tracking-[0.3em] text-cream/50 mb-5">
+            <div className="text-[11px] uppercase tracking-[0.3em] text-cream/50 mb-4 md:mb-5">
               Contatti
             </div>
             <ul className="space-y-3 text-sm font-light">
@@ -77,7 +81,7 @@ export default function Footer() {
           </div>
 
           <div className="md:col-span-2">
-            <div className="text-[11px] uppercase tracking-[0.3em] text-cream/50 mb-5">
+            <div className="text-[11px] uppercase tracking-[0.3em] text-cream/50 mb-4 md:mb-5">
               Orari
             </div>
             <ul className="space-y-2 text-sm font-light text-cream/80">
@@ -90,7 +94,7 @@ export default function Footer() {
           </div>
 
           <div className="md:col-span-2">
-            <div className="text-[11px] uppercase tracking-[0.3em] text-cream/50 mb-5">
+            <div className="text-[11px] uppercase tracking-[0.3em] text-cream/50 mb-4 md:mb-5">
               Naviga
             </div>
             <ul className="space-y-2 text-sm font-light">
@@ -118,7 +122,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-cream/10 pt-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-3 text-[11px] uppercase tracking-[0.25em] text-cream/50">
+        <div className="border-t border-cream/10 pt-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-3 text-[10px] md:text-[11px] uppercase tracking-[0.2em] md:tracking-[0.25em] text-cream/50">
           <span>© {new Date().getFullYear()} Il Paradiso del Mare — P.IVA 00000000000</span>
           <span>Crafted with the sea in mind</span>
         </div>

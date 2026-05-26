@@ -16,7 +16,7 @@ export default function Reservation() {
     <section
       id="prenota"
       ref={ref}
-      className="relative h-[65vh] min-h-[560px] overflow-hidden bg-ink"
+      className="relative min-h-[560px] md:h-[65vh] py-20 md:py-0 overflow-hidden bg-ink"
     >
       <motion.div
         style={{ y }}
@@ -32,7 +32,7 @@ export default function Reservation() {
         <div className="absolute inset-0 bg-ink/65" />
       </motion.div>
 
-      <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
+      <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-5 md:px-6">
         <div className="overflow-hidden">
           <motion.h2
             initial={{ y: "110%" }}
@@ -65,7 +65,7 @@ export default function Reservation() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="display text-cream/90 text-3xl md:text-4xl lg:text-5xl leading-none mt-10"
+          className="display text-cream/90 text-2xl md:text-4xl lg:text-5xl leading-none mt-8 md:mt-10"
         >
           Vi aspettiamo
         </motion.h3>
@@ -75,7 +75,7 @@ export default function Reservation() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
-          className="mt-4 max-w-md text-cream/85 leading-relaxed font-light"
+          className="mt-4 max-w-md text-cream/85 text-sm md:text-base leading-relaxed font-light"
         >
           La sala è piccola, scegliete con calma il giorno migliore. Vi
           aspettiamo da martedì a domenica, dalle 19:30.
@@ -86,7 +86,7 @@ export default function Reservation() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5 }}
-          className="mt-10 flex flex-col sm:flex-row gap-4"
+          className="mt-8 md:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto max-w-sm sm:max-w-none"
         >
           <a
             href="tel:+390000000000"

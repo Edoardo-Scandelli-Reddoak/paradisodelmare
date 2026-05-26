@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Anton, Inter } from "next/font/google";
 import "./globals.css";
 
@@ -19,6 +19,13 @@ export const metadata: Metadata = {
   title: "Il Paradiso del Mare — Ristorante Pescheria",
   description:
     "Pescato del giorno, cucina di mare contemporanea. Una casa per chi ama il mare, dalla pescheria alla tavola.",
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  viewportFit: "cover",
+  themeColor: "#043a47",
 };
 
 export default function RootLayout({

@@ -38,9 +38,9 @@ const catches = [
 
 export default function DailyCatch() {
   return (
-    <section id="pescato" className="bg-cream py-28 md:py-40">
-      <div className="max-w-[1600px] mx-auto px-6 md:px-10">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 mb-16">
+    <section id="pescato" className="bg-cream py-20 md:py-40">
+      <div className="max-w-[1600px] mx-auto px-5 md:px-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-10 mb-10 md:mb-16">
           <div className="lg:col-span-7">
             <motion.span
               initial={{ opacity: 0 }}
@@ -55,7 +55,7 @@ export default function DailyCatch() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-              className="display text-ink text-[14vw] md:text-[7vw] lg:text-[5.8vw] leading-[0.9] mt-4"
+              className="display text-ink text-[14vw] sm:text-[12vw] md:text-[7vw] lg:text-[5.8vw] leading-[0.9] mt-3 md:mt-4"
             >
               Sapore di mare
             </motion.h2>
@@ -73,13 +73,14 @@ export default function DailyCatch() {
         </div>
 
         {/* Horizontal scroll list */}
-        <div className="relative -mx-6 md:-mx-10">
+        <div className="relative -mx-5 md:-mx-10">
           <div
-            className="flex gap-5 md:gap-7 overflow-x-auto overflow-y-hidden no-scrollbar px-6 md:px-10 pb-4"
+            className="flex gap-4 md:gap-7 overflow-x-auto overflow-y-hidden no-scrollbar px-5 md:px-10 pb-4 snap-x snap-mandatory"
             style={{
               touchAction: "pan-x",
               overscrollBehaviorX: "contain",
               overscrollBehaviorY: "auto",
+              WebkitOverflowScrolling: "touch",
             }}
           >
             {catches.map((c, i) => (
@@ -89,7 +90,7 @@ export default function DailyCatch() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.8, delay: i * 0.06 }}
-                className="group relative shrink-0 w-[260px] md:w-[340px] aspect-[3/4] overflow-hidden rounded-sm bg-ink/5 select-none"
+                className="group relative shrink-0 w-[230px] sm:w-[280px] md:w-[340px] aspect-[3/4] overflow-hidden rounded-sm bg-ink/5 select-none snap-start"
               >
                 <Image
                   src={c.image}
@@ -99,11 +100,11 @@ export default function DailyCatch() {
                   className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/10 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-6">
+                <div className="absolute bottom-0 left-0 right-0 p-5 md:p-6">
                   <div className="text-[10px] uppercase tracking-[0.3em] text-cream/70">
                     {c.origin}
                   </div>
-                  <div className="display text-3xl md:text-4xl text-cream mt-2 leading-none">
+                  <div className="display text-2xl md:text-4xl text-cream mt-2 leading-none">
                     {c.name}
                   </div>
                 </div>
@@ -111,7 +112,7 @@ export default function DailyCatch() {
               </motion.article>
             ))}
           </div>
-          <div className="mt-6 px-6 md:px-10 flex items-center gap-2 text-ink/50 text-[11px] uppercase tracking-[0.25em]">
+          <div className="mt-5 md:mt-6 px-5 md:px-10 flex items-center gap-2 text-ink/50 text-[10px] md:text-[11px] uppercase tracking-[0.25em]">
             ← Trascina per scoprire
           </div>
         </div>

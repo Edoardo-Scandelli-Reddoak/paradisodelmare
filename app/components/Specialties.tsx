@@ -37,9 +37,9 @@ const cards: MenuCard[] = [
 
 export default function Specialties() {
   return (
-    <section id="menu" className="bg-ink py-16 md:py-20 relative grain">
-      <div className="max-w-[1600px] mx-auto px-6 md:px-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
+    <section id="menu" className="bg-ink py-14 md:py-20 relative grain">
+      <div className="max-w-[1600px] mx-auto px-5 md:px-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10">
           {cards.map((card, i) => (
             <motion.a
               key={card.title}
@@ -52,7 +52,7 @@ export default function Specialties() {
               transition={{ duration: 0.9, delay: i * 0.1 }}
               className="group relative overflow-hidden rounded-sm bg-ink-700/30 border border-cream/10 block"
             >
-              <div className="relative aspect-[4/5] md:aspect-[5/4] overflow-hidden">
+              <div className="relative aspect-[3/4] sm:aspect-[4/5] md:aspect-[5/4] overflow-hidden">
                 <Image
                   src={card.image}
                   alt={card.title}
@@ -62,20 +62,20 @@ export default function Specialties() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-ink/10" />
 
-                <span className="absolute top-6 left-6 text-[10px] uppercase tracking-[0.3em] text-cream/80 bg-ink/30 backdrop-blur-md border border-cream/20 px-3 py-1 rounded-full">
+                <span className="absolute top-5 left-5 md:top-6 md:left-6 text-[10px] uppercase tracking-[0.3em] text-cream/80 bg-ink/30 backdrop-blur-md border border-cream/20 px-3 py-1 rounded-full">
                   {card.eyebrow}
                 </span>
 
                 {/* Bottom content — fixed structure so titles align across cards */}
-                <div className="absolute inset-x-0 bottom-0 p-7 md:p-10 flex flex-col">
-                  <h3 className="display text-cream text-5xl md:text-6xl lg:text-7xl leading-[0.9]">
+                <div className="absolute inset-x-0 bottom-0 p-5 md:p-10 flex flex-col">
+                  <h3 className="display text-cream text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.9]">
                     {card.title}
                   </h3>
-                  <p className="mt-4 text-cream/75 leading-relaxed font-light max-w-md text-sm md:text-base min-h-[3.25rem] md:min-h-[3.5rem] line-clamp-2">
+                  <p className="mt-3 md:mt-4 text-cream/75 leading-relaxed font-light max-w-md text-sm md:text-base md:min-h-[3.5rem] md:line-clamp-2">
                     {card.description}
                   </p>
 
-                  <div className="mt-5 inline-flex items-center gap-3 text-gold-light text-[11px] uppercase tracking-[0.3em]">
+                  <div className="mt-4 md:mt-5 inline-flex items-center gap-3 text-gold-light text-[11px] uppercase tracking-[0.3em]">
                     <span className="relative">
                       {card.hint}
                       <span className="absolute left-0 right-0 -bottom-1 h-px bg-gold-light/60 origin-left scale-x-100 group-hover:scale-x-0 transition-transform duration-700" />
