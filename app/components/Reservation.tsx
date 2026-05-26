@@ -1,0 +1,110 @@
+"use client";
+
+import Image from "next/image";
+import { motion, useScroll, useTransform } from "motion/react";
+import { useRef } from "react";
+
+export default function Reservation() {
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"],
+  });
+  const y = useTransform(scrollYProgress, [0, 1], ["-15%", "15%"]);
+
+  return (
+    <section
+      id="prenota"
+      ref={ref}
+      className="relative h-[65vh] min-h-[560px] overflow-hidden bg-ink"
+    >
+      <motion.div
+        style={{ y }}
+        className="absolute inset-0 scale-110 will-change-transform"
+      >
+        <Image
+          src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2400&q=80"
+          alt="Sala del ristorante"
+          fill
+          sizes="100vw"
+          className="object-cover"
+        />
+        <div className="absolute inset-0 bg-ink/65" />
+      </motion.div>
+
+      <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
+        <div className="overflow-hidden">
+          <motion.h2
+            initial={{ y: "110%" }}
+            whileInView={{ y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
+            className="display text-cream text-[16vw] md:text-[10vw] lg:text-[8vw] leading-[0.85]"
+          >
+            Riservate
+          </motion.h2>
+        </div>
+        <div className="overflow-hidden">
+          <motion.h2
+            initial={{ y: "110%" }}
+            whileInView={{ y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{
+              duration: 1.1,
+              ease: [0.22, 1, 0.36, 1],
+              delay: 0.1,
+            }}
+            className="display text-cream text-[16vw] md:text-[10vw] lg:text-[8vw] leading-[0.85]"
+          >
+            il <span className="text-gold-light">vostro</span> tavolo
+          </motion.h2>
+        </div>
+
+        <motion.h3
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="display text-cream/90 text-3xl md:text-4xl lg:text-5xl leading-none mt-10"
+        >
+          Vi aspettiamo
+        </motion.h3>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3 }}
+          className="mt-4 max-w-md text-cream/85 leading-relaxed font-light"
+        >
+          La sala è piccola, scegliete con calma il giorno migliore. Vi
+          aspettiamo da martedì a domenica, dalle 19:30.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5 }}
+          className="mt-10 flex flex-col sm:flex-row gap-4"
+        >
+          <a
+            href="tel:+390000000000"
+            className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-cream text-ink text-[12px] uppercase tracking-[0.25em] font-medium hover:bg-gold-light transition-colors duration-500"
+          >
+            Prenota ora
+            <span className="inline-block transition-transform group-hover:translate-x-1">
+              →
+            </span>
+          </a>
+          <a
+            href="mailto:info@ilparadisodelmare.it"
+            className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full border border-cream/40 text-cream text-[12px] uppercase tracking-[0.25em] hover:bg-cream/10 transition-colors duration-500"
+          >
+            Scrivici
+          </a>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
