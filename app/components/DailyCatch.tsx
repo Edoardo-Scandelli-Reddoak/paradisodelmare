@@ -66,9 +66,8 @@ export default function DailyCatch() {
             viewport={{ once: true }}
             className="lg:col-span-5 self-end text-ink/80 text-base md:text-lg leading-relaxed font-light max-w-md"
           >
-            Ricette di tradizione e qualche guizzo contemporaneo. Pochi
-            ingredienti, scelti con cura, lavorati con tecnica e rispetto del
-            prodotto.
+            Una cucina di mare autentica, pensata per sorprendere con gusto,
+            semplicità e raffinatezza.
           </motion.p>
         </div>
 

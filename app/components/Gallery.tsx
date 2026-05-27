@@ -56,7 +56,9 @@ export default function Gallery() {
               transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
               className="display text-ink text-[14vw] sm:text-[12vw] md:text-[6vw] lg:text-[5vw] leading-[0.95] mt-3 max-w-3xl"
             >
-              Una sala intima.
+              Uno spazio
+              <br />
+              da condividere.
             </motion.h2>
           </div>
           <motion.p
@@ -65,9 +67,9 @@ export default function Gallery() {
             viewport={{ once: true }}
             className="lg:col-span-5 text-ink/80 text-base md:text-lg leading-relaxed font-light max-w-md"
           >
-            Materiali naturali, luce calda, atmosfera raccolta. Pensata per
-            cene lente, da raccontare. Ideale anche per piccoli eventi
-            privati.
+            Dettagli curati, stile contemporaneo e atmosfera accogliente. Una
+            sala pensata per vivere la cucina di mare con calma, gusto e buona
+            compagnia.
           </motion.p>
         </div>
 

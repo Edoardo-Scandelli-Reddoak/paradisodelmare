@@ -35,19 +35,23 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 py-10 md:py-14">
           <div className="md:col-span-5">
             <p className="text-cream/70 leading-relaxed font-light max-w-sm">
-              Ristorante pescheria. Una storia di famiglia, tre generazioni a
-              contatto con il mare della Liguria.
+              Pesce fresco selezionato ogni giorno, cucina autentica e sapori
+              che raccontano la tradizione mediterranea in ogni piatto.
             </p>
             <div className="flex items-center gap-4 mt-6 md:mt-8">
               <a
-                href="#"
+                href="https://www.instagram.com/ilparadisodelmare_?igsh=MTI2NDNkMmZkbnQzNg=="
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Instagram"
                 className="w-11 h-11 rounded-full border border-cream/20 flex items-center justify-center hover:bg-cream hover:text-ink transition-colors"
               >
                 <InstagramIcon size={16} />
               </a>
               <a
-                href="#"
+                href="https://www.facebook.com/people/Il-Paradiso-del-Mare/61584961525690/"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Facebook"
                 className="w-11 h-11 rounded-full border border-cream/20 flex items-center justify-center hover:bg-cream hover:text-ink transition-colors"
               >
@@ -63,12 +67,12 @@ export default function Footer() {
             <ul className="space-y-3 text-sm font-light">
               <li className="flex items-start gap-3">
                 <MapPinIcon size={16} className="mt-1 text-gold-light shrink-0" />
-                <span>Via del Porto 14, 16100 Genova</span>
+                <span>Via Trieste 23, Muggiò (MB)</span>
               </li>
               <li className="flex items-center gap-3">
                 <PhoneIcon size={16} className="text-gold-light shrink-0" />
-                <a href="tel:+390000000000" className="link-underline">
-                  +39 010 000 0000
+                <a href="tel:+393932655783" className="link-underline">
+                  +39 393 265 5783
                 </a>
               </li>
               <li className="flex items-center gap-3">
@@ -85,11 +89,10 @@ export default function Footer() {
               Orari
             </div>
             <ul className="space-y-2 text-sm font-light text-cream/80">
-              <li>Mar – Gio</li>
-              <li className="text-cream">19:30 – 23:00</li>
-              <li className="pt-2">Ven – Dom</li>
-              <li className="text-cream">12:30 – 14:30</li>
-              <li className="text-cream">19:30 – 23:30</li>
+              <li>Mar – Dom</li>
+              <li className="text-cream">19:00 – 23:30</li>
+              <li className="pt-2">Sab – Dom</li>
+              <li className="text-cream">12:00 – 15:00</li>
             </ul>
           </div>
 

@@ -77,8 +77,8 @@ export default function Reservation() {
           transition={{ delay: 0.3 }}
           className="mt-4 max-w-md text-cream/85 text-sm md:text-base leading-relaxed font-light"
         >
-          La sala è piccola, scegliete con calma il giorno migliore. Vi
-          aspettiamo da martedì a domenica, dalle 19:30.
+          Scegli il momento giusto e vivi un’esperienza di mare fatta di
+          gusto, atmosfera e attenzione ai dettagli. Ti aspettiamo!
         </motion.p>
 
         <motion.div
@@ -89,7 +89,7 @@ export default function Reservation() {
           className="mt-8 md:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto max-w-sm sm:max-w-none"
         >
           <a
-            href="tel:+390000000000"
+            href="tel:+393932655783"
             className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-cream text-ink text-[12px] uppercase tracking-[0.25em] font-medium hover:bg-gold-light transition-colors duration-500"
           >
             Prenota ora

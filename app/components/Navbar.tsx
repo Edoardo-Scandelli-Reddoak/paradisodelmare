@@ -163,7 +163,7 @@ export default function Navbar() {
                 Prenota un tavolo →
               </motion.a>
               <motion.a
-                href="tel:+390000000000"
+                href="tel:+393932655783"
                 onClick={() => setOpen(false)}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}

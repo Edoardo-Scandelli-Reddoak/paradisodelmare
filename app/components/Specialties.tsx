@@ -27,7 +27,7 @@ const cards: MenuCard[] = [
     eyebrow: "La cantina",
     title: "Carta dei Vini",
     description:
-      "Una selezione studiata per il mare: bianchi minerali, bollicine, qualche rosso elegante e i nostri preferiti dalla costa.",
+      "Bianchi minerali, bollicine e rossi eleganti: una selezione pensata per il mare.",
     hint: "Sfoglia la lista vini (PDF)",
     href: "/lista-vini.pdf",
     image:
@@ -71,7 +71,7 @@ export default function Specialties() {
                   <h3 className="display text-cream text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.9]">
                     {card.title}
                   </h3>
-                  <p className="mt-3 md:mt-4 text-cream/75 leading-relaxed font-light max-w-md text-sm md:text-base md:min-h-[3.5rem] md:line-clamp-2">
+                  <p className="mt-3 md:mt-4 text-cream/75 leading-relaxed font-light max-w-md text-sm md:text-base line-clamp-2">
                     {card.description}
                   </p>
 

@@ -51,7 +51,7 @@ export default function Hero() {
             transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
             className="display text-cream text-[16vw] md:text-[12vw] lg:text-[10vw] leading-[0.85]"
           >
-            Dalla pesca
+            Dal mare
           </motion.h1>
         </div>
         <div className="overflow-hidden mt-[-0.02em]">
@@ -73,8 +73,8 @@ export default function Hero() {
           className="mt-8 md:mt-10 flex flex-col md:flex-row md:items-end justify-between gap-6 md:gap-8"
         >
           <p className="max-w-md text-cream/85 text-sm md:text-lg leading-relaxed font-light">
-            Tre generazioni a contatto con il mare. Pescato di giornata,
-            cottura sapiente e una cantina che racconta la costa.
+            Pesce fresco selezionato ogni giorno, cucina autentica e sapori
+            che raccontano la tradizione mediterranea in ogni piatto.
           </p>
 
           <div className="flex">

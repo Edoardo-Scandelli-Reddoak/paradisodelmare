@@ -65,11 +65,11 @@ export default function Story() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-            className="display text-ink text-[13vw] sm:text-[10vw] md:text-[5.5vw] lg:text-[4.6vw] leading-[0.95] max-w-xl"
+            className="display text-ink text-[13vw] sm:text-[10vw] md:text-[5.5vw] lg:text-[4.6vw] leading-[1.12] max-w-xl"
           >
-            Cucina di mare,
+            Il mare,
             <br />
-            di famiglia.
+            la nostra passione.
           </motion.h2>
 
           <motion.p
@@ -79,10 +79,11 @@ export default function Story() {
             transition={{ duration: 1, delay: 0.35 }}
             className="mt-5 md:mt-6 text-ink/80 text-base md:text-lg leading-relaxed font-light max-w-xl"
           >
-            Tutto è iniziato in una piccola pescheria di paese, dove nonno
-            Antonio sceglieva ogni mattina il meglio del pescato. Oggi la
-            stessa attenzione vive nella nostra cucina: ingredienti
-            riconoscibili, gesti precisi, rispetto del prodotto.
+            Tutto nasce dalla passione per il pesce fresco e dalla volontà di
+            portare a Muggiò un’esperienza autentica fatta di qualità,
+            accoglienza e cucina di mare. Ogni giorno selezioniamo con
+            attenzione le migliori materie prime per trasformarle in piatti che
+            uniscono tradizione, gusto e semplicità.
           </motion.p>
 
           <motion.div
@@ -93,9 +94,9 @@ export default function Story() {
             className="mt-10 md:mt-12 grid grid-cols-3 gap-3 md:gap-6 max-w-md"
           >
             {[
-              { n: "1972", l: "Anno di apertura" },
-              { n: "40", l: "Coperti in sala" },
-              { n: "Km 0", l: "Filiera del mare" },
+              { n: "2025", l: "Anno di apertura" },
+              { n: "80", l: "Coperti in sala" },
+              { n: "100%", l: "Pesce fresco selezionato" },
             ].map((s) => (
               <div key={s.l} className="border-t border-ink/15 pt-3 md:pt-4">
                 <div className="display text-3xl md:text-5xl text-ink">
