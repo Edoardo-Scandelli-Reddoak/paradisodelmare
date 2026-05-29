@@ -8,7 +8,8 @@ import { MenuIcon, CloseIcon } from "./icons";
 const links = [
   { label: "Home", href: "#top" },
   { label: "Menu", href: "#menu" },
-  { label: "Contattaci", href: "#contatti" },
+  { label: "I nostri piatti", href: "#pescato" },
+  { label: "Contatti", href: "#contatti" },
 ];
 
 export default function Navbar() {
@@ -67,7 +68,7 @@ export default function Navbar() {
           />
         </a>
 
-        <nav className="hidden lg:flex items-center gap-10">
+        <nav className="hidden lg:flex items-center gap-8 xl:gap-10">
           {links.map((l) => (
             <a
               key={l.href}
@@ -138,7 +139,7 @@ export default function Navbar() {
                 <CloseIcon size={26} />
               </button>
             </div>
-            <motion.nav className="flex flex-col px-5 py-8 gap-5">
+            <motion.nav className="flex flex-col px-5 py-6 sm:py-8 gap-3 sm:gap-5">
               {links.map((l, i) => (
                 <motion.a
                   key={l.href}
@@ -147,7 +148,7 @@ export default function Navbar() {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.1 + i * 0.07 }}
-                  className="display text-4xl sm:text-5xl text-cream py-1"
+                  className="display text-3xl sm:text-5xl text-cream py-1"
                 >
                   {l.label}
                 </motion.a>
@@ -157,8 +158,8 @@ export default function Navbar() {
                 onClick={() => setOpen(false)}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.5 }}
-                className="mt-6 inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-cream text-ink text-sm uppercase tracking-[0.2em] w-full"
+                transition={{ delay: 0.55 }}
+                className="mt-5 sm:mt-6 inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-cream text-ink text-sm uppercase tracking-[0.2em] w-full"
               >
                 Prenota un tavolo →
               </motion.a>
@@ -167,7 +168,7 @@ export default function Navbar() {
                 onClick={() => setOpen(false)}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.55 }}
+                transition={{ delay: 0.6 }}
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full border border-cream/30 text-cream text-sm uppercase tracking-[0.2em] w-full"
               >
                 Chiama ora

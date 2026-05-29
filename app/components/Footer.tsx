@@ -125,9 +125,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-cream/10 pt-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-3 text-[10px] md:text-[11px] uppercase tracking-[0.2em] md:tracking-[0.25em] text-cream/50">
-          <span>© {new Date().getFullYear()} Il Paradiso del Mare — P.IVA 00000000000</span>
-          <span>Crafted with the sea in mind</span>
+        <div className="border-t border-cream/10 pt-6 text-[10px] md:text-[11px] uppercase tracking-[0.2em] md:tracking-[0.25em] text-cream/50">
+          <span>© {new Date().getFullYear()} Il Paradiso del Mare</span>
         </div>
       </div>
     </footer>
