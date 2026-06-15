@@ -20,8 +20,7 @@ const cards: MenuCard[] = [
       "Crudi, primi, secondi e dessert. La nostra carta cambia con il pescato del giorno e con le stagioni.",
     hint: "Sfoglia il menu (PDF)",
     href: "/menu.pdf",
-    image:
-      "https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=1600&q=80",
+    image: "/vini-0976.jpg",
   },
   {
     eyebrow: "La cantina",
@@ -30,8 +29,7 @@ const cards: MenuCard[] = [
       "Bianchi minerali, bollicine e rossi eleganti: una selezione pensata per il mare.",
     hint: "Sfoglia la lista vini (PDF)",
     href: "/lista-vini.pdf",
-    image:
-      "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?auto=format&fit=crop&w=1600&q=80",
+    image: "/menu-0840.jpg",
   },
 ];
 

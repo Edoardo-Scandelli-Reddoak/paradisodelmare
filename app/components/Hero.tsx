@@ -27,7 +27,7 @@ export default function Hero() {
         className="absolute inset-0 will-change-transform"
       >
         <Image
-          src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=2400&q=80"
+          src="/hero-0923.jpg"
           alt="Piatto di mare contemporaneo"
           fill
           priority

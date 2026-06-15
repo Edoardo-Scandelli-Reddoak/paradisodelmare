@@ -23,7 +23,7 @@ export default function Reservation() {
         className="absolute inset-0 scale-110 will-change-transform"
       >
         <Image
-          src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2400&q=80"
+          src="/prenota-0359.png"
           alt="Sala del ristorante"
           fill
           sizes="100vw"

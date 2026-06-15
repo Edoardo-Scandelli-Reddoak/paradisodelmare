@@ -6,10 +6,10 @@ import { motion, AnimatePresence } from "motion/react";
 import { MenuIcon, CloseIcon } from "./icons";
 
 const links = [
-  { label: "Home", href: "#top" },
-  { label: "Menu", href: "#menu" },
-  { label: "I nostri piatti", href: "#pescato" },
-  { label: "Contatti", href: "#contatti" },
+  { label: "Home", href: "/#top" },
+  { label: "Menu", href: "/#menu" },
+  { label: "I nostri piatti", href: "/piatti" },
+  { label: "Contatti", href: "/contatti" },
 ];
 
 export default function Navbar() {
@@ -43,7 +43,7 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-[1600px] mx-auto px-5 md:px-10 flex items-center justify-between h-16 md:h-24">
-        <a href="#top" className="flex items-center group relative h-11 md:h-16 w-[150px] md:w-[200px]">
+        <a href="/#top" className="flex items-center group relative h-11 md:h-16 w-[150px] md:w-[200px]">
           {/* Dark logo — visible when scrolled */}
           <Image
             src="/logo/logo_paradiso_del_mare.png"
@@ -84,7 +84,7 @@ export default function Navbar() {
 
         <div className="hidden lg:block">
           <a
-            href="#prenota"
+            href="/#prenota"
             className={`group inline-flex items-center gap-2 px-6 py-3 rounded-full text-[12px] uppercase tracking-[0.2em] font-medium transition-all duration-500 ${
               scrolled
                 ? "bg-ink text-cream hover:bg-ink-700"
@@ -154,7 +154,7 @@ export default function Navbar() {
                 </motion.a>
               ))}
               <motion.a
-                href="#prenota"
+                href="/#prenota"
                 onClick={() => setOpen(false)}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
