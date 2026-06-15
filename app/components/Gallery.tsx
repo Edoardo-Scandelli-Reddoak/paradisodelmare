@@ -5,22 +5,28 @@ import { motion } from "motion/react";
 
 const tiles = [
   {
-    src: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1400&q=80",
-    alt: "Sala del ristorante",
+    src: "/sala-0909.jpg",
+    alt: "La sala del ristorante",
     caption: "La sala",
-    span: "md:col-span-8 md:row-span-2 h-[300px] sm:h-[420px] md:h-[640px]",
+    span: "md:col-span-5 md:row-span-2 h-[320px] sm:h-[460px] md:h-[640px]",
   },
   {
-    src: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80",
-    alt: "Dettaglio piatto",
-    caption: "Il piatto",
-    span: "md:col-span-4 h-[180px] sm:h-[200px] md:h-[308px]",
+    src: "/sala-0899.jpg",
+    alt: "L'atmosfera della sala",
+    caption: "L'atmosfera",
+    span: "md:col-span-7 h-[200px] sm:h-[230px] md:h-[310px]",
   },
   {
-    src: "https://images.unsplash.com/photo-1506084868230-bb9d95c24759?auto=format&fit=crop&w=1200&q=80",
-    alt: "Bicchiere di vino",
-    caption: "La cantina",
-    span: "md:col-span-4 h-[180px] sm:h-[200px] md:h-[308px]",
+    src: "/sala-0914.jpg",
+    alt: "Dettagli della sala",
+    caption: "I dettagli",
+    span: "md:col-span-4 h-[200px] sm:h-[230px] md:h-[310px]",
+  },
+  {
+    src: "/sala-0610.jpg",
+    alt: "L'accoglienza in sala",
+    caption: "L'accoglienza",
+    span: "md:col-span-3 h-[200px] sm:h-[230px] md:h-[310px]",
   },
 ];
 

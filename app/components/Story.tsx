@@ -27,7 +27,7 @@ export default function Story() {
             className="absolute top-0 left-0 w-[68%] aspect-[3/4] overflow-hidden rounded-sm"
           >
             <Image
-              src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1400&q=80"
+              src="/storia-0943.jpg"
               alt="Interno del ristorante"
               fill
               sizes="(min-width:1024px) 40vw, 80vw"
@@ -39,7 +39,7 @@ export default function Story() {
             className="absolute bottom-0 right-0 w-[58%] aspect-[4/5] overflow-hidden rounded-sm shadow-2xl"
           >
             <Image
-              src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=1400&q=80"
+              src="/storia-1122.jpg"
               alt="Pescato del giorno"
               fill
               sizes="(min-width:1024px) 30vw, 60vw"

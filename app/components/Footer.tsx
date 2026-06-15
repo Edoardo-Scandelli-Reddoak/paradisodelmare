@@ -102,23 +102,28 @@ export default function Footer() {
             </div>
             <ul className="space-y-2 text-sm font-light">
               <li>
-                <a href="#storia" className="link-underline">
+                <a href="/#storia" className="link-underline">
                   Storia
                 </a>
               </li>
               <li>
-                <a href="#menu" className="link-underline">
+                <a href="/#menu" className="link-underline">
                   Menu
                 </a>
               </li>
               <li>
-                <a href="#pescato" className="link-underline">
-                  Piatti
+                <a href="/piatti" className="link-underline">
+                  I nostri piatti
                 </a>
               </li>
               <li>
-                <a href="#sala" className="link-underline">
+                <a href="/#sala" className="link-underline">
                   Sala
+                </a>
+              </li>
+              <li>
+                <a href="/contatti" className="link-underline">
+                  Contatti
                 </a>
               </li>
             </ul>
