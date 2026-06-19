@@ -1,41 +1,14 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
+import { featured } from "../data/dishes";
 
-// ── Dati (immagini temporanee Unsplash, facilmente sostituibili) ────────────
-const featured = [
-  {
-    name: "Tris di tartare",
-    category: "Il Crudo",
-    description:
-      "Tre tartare di mare in un solo piatto: branzino, salmone e gambero, tagliati al coltello e profumati con scorza d'agrumi. Freschezza pura, da gustare con un filo d'olio e una spruzzata di lime.",
-    images: ["/feat-0813.jpg", "/feat-0495.jpg"],
-  },
-  {
-    name: "Gratinato “Il Paradiso del Mare”",
-    category: "Secondo",
-    description:
-      "Il nostro gran gratinato: scampo, gambero, cozze, capesante, spiedino di gambero e calamari e ostrica, dorati al forno con pangrattato profumato. Un viaggio tra i sapori del mare in un'unica portata.",
-    images: ["/feat-0575.jpg", "/feat-0566.jpg"],
-  },
-  {
-    name: "Gran Crudo di mare",
-    category: "Crudo · Crostacei",
-    description:
-      "La nostra selezione di crudo servita sull'alzata: gambero rosso, gambero viola, scampo e canocchia, accompagnati da ostriche e molluschi. Materia prima di assoluta freschezza, da assaporare in purezza.",
-    images: ["/feat-0962.jpg", "/feat-0943.jpg"],
-  },
-  {
-    name: "Risotto cacio e pepe con gambero e lime",
-    category: "Primo",
-    description:
-      "Riso Carnaroli mantecato cacio e pepe, con tartare di gambero crudo e scorza di lime grattugiata al momento. L'incontro tra la cremosità della tradizione e la freschezza del mare.",
-    images: ["/feat-1087.jpg", "/feat-1075.jpg"],
-  },
-];
+const MotionLink = motion.create(Link);
 
+// ── Galleria (immagini reali) ───────────────────────────────────────────────
 const gallery = [
   "/piatto-0365.jpg",
   "/piatto-0398.jpg",
@@ -110,20 +83,31 @@ export default function DishesContent() {
               initial={{ y: "110%" }}
               animate={{ y: 0 }}
               transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.25 }}
-              className="display text-cream text-[18vw] sm:text-[14vw] md:text-[10vw] lg:text-[8vw] leading-[0.85]"
+              className="display text-cream text-[15vw] sm:text-[13vw] md:text-[10vw] lg:text-[8vw] leading-[0.85]"
             >
               Sapore di mare
             </motion.h1>
           </div>
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.6 }}
-            className="mt-5 max-w-xl text-cream/85 text-base md:text-lg leading-relaxed font-light"
+            className="mt-5 flex flex-col md:flex-row md:items-end md:justify-between gap-6 md:gap-8"
           >
-            Una cucina di mare autentica, fatta di materie prime selezionate ogni
-            giorno. Ecco alcuni dei piatti che ci rendono fieri.
-          </motion.p>
+            <p className="max-w-xl text-cream/85 text-base md:text-lg leading-relaxed font-light">
+              Una cucina di mare autentica, fatta di materie prime selezionate
+              ogni giorno. Ecco alcuni dei piatti che ci rendono fieri.
+            </p>
+            <a
+              href="#prenota"
+              className="group inline-flex items-center justify-center gap-3 w-full md:w-auto px-7 py-4 rounded-full bg-cream text-ink text-[12px] uppercase tracking-[0.25em] font-medium hover:bg-gold-light transition-colors duration-500 shrink-0"
+            >
+              Prenota un tavolo
+              <span className="inline-block transition-transform group-hover:translate-x-1">
+                →
+              </span>
+            </a>
+          </motion.div>
         </div>
       </section>
 
@@ -145,7 +129,7 @@ export default function DishesContent() {
                   i % 2 === 1 ? "lg:order-2" : ""
                 }`}
               >
-                <div className="relative h-[360px] sm:h-[440px] md:h-[520px]">
+                <div className="relative h-[300px] sm:h-[420px] md:h-[520px]">
                   {/* Foto 1 — dietro */}
                   <div
                     className={`group absolute top-0 w-[56%] aspect-[3/4] overflow-hidden rounded-sm bg-ink/5 z-10 ${
@@ -247,7 +231,7 @@ export default function DishesContent() {
             Crudi, primi, secondi e dessert: la nostra proposta cambia con il
             pescato del giorno e con le stagioni. Scopri la carta completa.
           </motion.p>
-          <motion.a
+          <MotionLink
             href="/#menu"
             {...reveal}
             transition={{ duration: 0.9, delay: 0.35 }}
@@ -257,7 +241,7 @@ export default function DishesContent() {
             <span className="inline-block transition-transform group-hover:translate-x-1">
               →
             </span>
-          </motion.a>
+          </MotionLink>
         </div>
       </section>
 

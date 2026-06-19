@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Story from "./components/Story";
+import FishCounter from "./components/FishCounter";
 import Specialties from "./components/Specialties";
 import DailyCatch from "./components/DailyCatch";
 import Gallery from "./components/Gallery";
@@ -13,6 +14,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Story />
+      <FishCounter />
       <Specialties />
       <DailyCatch />
       <Gallery />

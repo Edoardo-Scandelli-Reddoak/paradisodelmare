@@ -77,12 +77,12 @@ export default function Hero() {
             che raccontano la tradizione mediterranea in ogni piatto.
           </p>
 
-          <div className="flex">
+          <div className="flex w-full md:w-auto">
             <a
-              href="#menu"
-              className="group inline-flex items-center justify-center gap-3 w-full md:w-auto px-7 py-4 rounded-full border border-cream/40 text-cream text-[12px] uppercase tracking-[0.25em] font-medium hover:bg-cream/10 transition-colors duration-500"
+              href="#prenota"
+              className="group inline-flex items-center justify-center gap-3 w-full md:w-auto px-7 py-4 rounded-full bg-cream text-ink text-[12px] uppercase tracking-[0.25em] font-medium hover:bg-gold-light transition-colors duration-500"
             >
-              Scopri il menu
+              Prenota un tavolo
               <span className="inline-block transition-transform group-hover:translate-x-1">
                 →
               </span>

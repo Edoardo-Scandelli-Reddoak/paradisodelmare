@@ -42,7 +42,7 @@ const features = [
 
 export default function Gallery() {
   return (
-    <section id="sala" className="bg-cream-200 py-20 md:py-36">
+    <section id="sala" className="bg-cream-200 py-16 md:py-36">
       <div className="max-w-[1600px] mx-auto px-5 md:px-10">
         {/* Header */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-10 mb-10 md:mb-20 items-end">

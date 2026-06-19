@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import { PhoneIcon, MailIcon, MapPinIcon } from "./icons";
@@ -42,7 +43,8 @@ export default function ContactHero() {
         <div className="absolute inset-0 bg-gradient-to-r from-ink/55 via-transparent to-transparent" />
       </motion.div>
 
-      <div className="relative z-10 w-full max-w-[1600px] mx-auto px-5 md:px-10 pb-12 md:pb-20 pt-28 md:pt-40">
+      <div className="relative z-10 w-full max-w-[1600px] mx-auto px-5 md:px-10 pb-12 md:pb-20 pt-28 md:pt-40 flex flex-col md:flex-row md:items-end md:justify-between gap-8">
+        <div className="md:max-w-3xl">
         <motion.span
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
@@ -57,7 +59,7 @@ export default function ContactHero() {
             initial={{ y: "110%" }}
             animate={{ y: 0 }}
             transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.25 }}
-            className="display text-cream text-[18vw] sm:text-[14vw] md:text-[10vw] lg:text-[8vw] leading-[0.85]"
+            className="display text-cream text-[15vw] sm:text-[13vw] md:text-[10vw] lg:text-[8vw] leading-[0.85]"
           >
             Vi aspettiamo
           </motion.h1>
@@ -77,7 +79,7 @@ export default function ContactHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, delay: 0.8 }}
-          className="mt-8 flex flex-wrap gap-3"
+          className="mt-8 flex flex-wrap items-center gap-3"
         >
           {chips.map(({ label, href, Icon, external }) => (
             <a
@@ -92,6 +94,24 @@ export default function ContactHero() {
               {label}
             </a>
           ))}
+        </motion.div>
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.9, delay: 0.9 }}
+          className="shrink-0"
+        >
+          <Link
+            href="/#prenota"
+            className="group inline-flex items-center justify-center gap-3 w-full md:w-auto px-7 py-4 rounded-full bg-cream text-ink text-[12px] uppercase tracking-[0.25em] font-medium hover:bg-gold-light transition-colors duration-400"
+          >
+            Prenota un tavolo
+            <span className="inline-block transition-transform group-hover:translate-x-1">
+              →
+            </span>
+          </Link>
         </motion.div>
       </div>
     </section>
