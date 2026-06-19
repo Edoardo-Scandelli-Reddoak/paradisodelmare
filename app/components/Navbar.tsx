@@ -1,9 +1,12 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { MenuIcon, CloseIcon } from "./icons";
+
+const MotionLink = motion.create(Link);
 
 const links = [
   { label: "Home", href: "/#top" },
@@ -43,7 +46,7 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-[1600px] mx-auto px-5 md:px-10 flex items-center justify-between h-16 md:h-24">
-        <a href="/#top" className="flex items-center group relative h-11 md:h-16 w-[150px] md:w-[200px]">
+        <Link href="/#top" className="flex items-center group relative h-11 md:h-16 w-[150px] md:w-[200px]">
           {/* Dark logo — visible when scrolled */}
           <Image
             src="/logo/logo_paradiso_del_mare.png"
@@ -66,11 +69,11 @@ export default function Navbar() {
               scrolled ? "opacity-0" : "opacity-100"
             }`}
           />
-        </a>
+        </Link>
 
         <nav className="hidden lg:flex items-center gap-8 xl:gap-10">
           {links.map((l) => (
-            <a
+            <Link
               key={l.href}
               href={l.href}
               className={`link-underline text-[13px] uppercase tracking-[0.2em] font-medium transition-colors duration-500 ${
@@ -78,12 +81,12 @@ export default function Navbar() {
               }`}
             >
               {l.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
         <div className="hidden lg:block">
-          <a
+          <Link
             href="/#prenota"
             className={`group inline-flex items-center gap-2 px-6 py-3 rounded-full text-[12px] uppercase tracking-[0.2em] font-medium transition-all duration-500 ${
               scrolled
@@ -95,7 +98,7 @@ export default function Navbar() {
             <span className="inline-block transition-transform group-hover:translate-x-1">
               →
             </span>
-          </a>
+          </Link>
         </div>
 
         <button
@@ -141,7 +144,7 @@ export default function Navbar() {
             </div>
             <motion.nav className="flex flex-col px-5 py-6 sm:py-8 gap-3 sm:gap-5">
               {links.map((l, i) => (
-                <motion.a
+                <MotionLink
                   key={l.href}
                   href={l.href}
                   onClick={() => setOpen(false)}
@@ -151,9 +154,9 @@ export default function Navbar() {
                   className="display text-3xl sm:text-5xl text-cream py-1"
                 >
                   {l.label}
-                </motion.a>
+                </MotionLink>
               ))}
-              <motion.a
+              <MotionLink
                 href="/#prenota"
                 onClick={() => setOpen(false)}
                 initial={{ opacity: 0, y: 20 }}
@@ -162,7 +165,7 @@ export default function Navbar() {
                 className="mt-5 sm:mt-6 inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-cream text-ink text-sm uppercase tracking-[0.2em] w-full"
               >
                 Prenota un tavolo →
-              </motion.a>
+              </MotionLink>
               <motion.a
                 href="tel:+393932655783"
                 onClick={() => setOpen(false)}

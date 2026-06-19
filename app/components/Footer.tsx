@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "motion/react";
 import {
   InstagramIcon,
@@ -102,29 +103,24 @@ export default function Footer() {
             </div>
             <ul className="space-y-2 text-sm font-light">
               <li>
-                <a href="/#storia" className="link-underline">
-                  Storia
-                </a>
+                <Link href="/#top" className="link-underline">
+                  Home
+                </Link>
               </li>
               <li>
-                <a href="/#menu" className="link-underline">
+                <Link href="/#menu" className="link-underline">
                   Menu
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/piatti" className="link-underline">
+                <Link href="/piatti" className="link-underline">
                   I nostri piatti
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#sala" className="link-underline">
-                  Sala
-                </a>
-              </li>
-              <li>
-                <a href="/contatti" className="link-underline">
+                <Link href="/contatti" className="link-underline">
                   Contatti
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

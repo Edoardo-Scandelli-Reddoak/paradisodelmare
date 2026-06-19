@@ -97,12 +97,6 @@ export default function Reservation() {
               →
             </span>
           </a>
-          <a
-            href="mailto:info@ilparadisodelmare.it"
-            className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full border border-cream/40 text-cream text-[12px] uppercase tracking-[0.25em] hover:bg-cream/10 transition-colors duration-500"
-          >
-            Scrivici
-          </a>
         </motion.div>
       </div>
     </section>

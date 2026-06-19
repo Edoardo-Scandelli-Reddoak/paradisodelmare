@@ -163,7 +163,7 @@ export default function ContactMain() {
             transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
             className="lg:col-span-7"
           >
-            <div className="rounded-sm border border-ink/12 bg-foam/70 shadow-[0_30px_80px_-40px_rgba(4,58,71,0.45)] p-6 sm:p-8 md:p-12">
+            <div className="rounded-sm border border-ink/12 bg-foam/70 shadow-[0_30px_80px_-40px_rgba(4,58,71,0.45)] p-5 sm:p-8 md:p-12">
               <span className="text-[11px] uppercase tracking-[0.3em] text-gold">
                 — Scrivici
               </span>
@@ -200,7 +200,7 @@ export default function ContactMain() {
           <motion.div
             {...reveal}
             transition={{ duration: 0.8 }}
-            className="relative w-full h-[300px] md:h-[420px] overflow-hidden rounded-sm border border-ink/10"
+            className="relative w-full h-[260px] sm:h-[320px] md:h-[420px] overflow-hidden rounded-sm border border-ink/10"
           >
             <iframe
               title="Mappa — Il Paradiso del Mare, Via Trieste 23, Muggiò"

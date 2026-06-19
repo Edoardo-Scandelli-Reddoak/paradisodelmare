@@ -43,6 +43,8 @@ html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  /* Offset per le ancore sotto la navbar fissa (desktop h-24 = 96px) */
+  scroll-padding-top: 7rem;
 }
 
 body {
@@ -63,7 +65,8 @@ img {
 
 @media (max-width: 640px) {
   html {
-    scroll-padding-top: 80px;
+    /* navbar h-16 = 64px + margine/safe-area */
+    scroll-padding-top: 5.5rem;
   }
 }
 
