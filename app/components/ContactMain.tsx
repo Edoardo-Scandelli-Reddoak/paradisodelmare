@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "motion/react";
-import ContactForm from "./ContactForm";
 import {
   MapPinIcon,
   PhoneIcon,
@@ -59,10 +58,19 @@ export default function ContactMain() {
               transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
               className="display text-ink text-4xl md:text-6xl leading-[0.9]"
             >
-              Dove
+              Prenota
               <br />
-              trovarci
+              un tavolo
             </motion.h2>
+            <motion.p
+              {...reveal}
+              transition={{ duration: 0.7, delay: 0.08 }}
+              className="mt-5 text-ink/70 leading-relaxed font-light max-w-md"
+            >
+              Scegli data, orario e numero di ospiti: la prenotazione è
+              immediata e senza commissioni. Qui sotto trovi anche tutti i
+              nostri recapiti per contattarci direttamente.
+            </motion.p>
             <motion.div
               {...reveal}
               transition={{ duration: 0.7, delay: 0.1 }}
@@ -161,21 +169,17 @@ export default function ContactMain() {
           <motion.div
             {...reveal}
             transition={{ duration: 0.8, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-            className="lg:col-span-7"
+            id="prenota"
+            className="lg:col-span-7 scroll-mt-28"
           >
-            <div className="rounded-sm border border-ink/12 bg-foam/70 shadow-[0_30px_80px_-40px_rgba(4,58,71,0.45)] p-5 sm:p-8 md:p-12">
-              <span className="text-[11px] uppercase tracking-[0.3em] text-gold">
-                — Scrivici
-              </span>
-              <h2 className="display text-ink text-4xl md:text-5xl leading-none mt-3">
-                Mandaci un messaggio
-              </h2>
-              <p className="mt-4 text-ink/70 leading-relaxed font-light max-w-xl">
-                Compila il modulo e ti risponderemo al più presto.
-              </p>
-              <div className="mt-8 md:mt-10">
-                <ContactForm />
-              </div>
+            <div className="overflow-hidden rounded-sm border border-ink/12 bg-foam/70 shadow-[0_30px_80px_-40px_rgba(4,58,71,0.45)]">
+              <iframe
+                src="https://widget.thefork.com/6cadddaa-0963-4599-8b08-0a40605889ee"
+                title="Prenota un tavolo — TheFork"
+                allow="payment *"
+                className="block w-full min-w-[320px] min-h-[800px] border-0"
+                loading="lazy"
+              />
             </div>
           </motion.div>
         </div>

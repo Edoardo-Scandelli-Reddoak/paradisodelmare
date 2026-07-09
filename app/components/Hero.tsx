@@ -79,7 +79,7 @@ export default function Hero() {
 
           <div className="flex w-full md:w-auto">
             <a
-              href="#prenota"
+              href="/contatti#prenota"
               className="group inline-flex items-center justify-center gap-3 w-full md:w-auto px-7 py-4 rounded-full bg-cream text-ink text-[12px] uppercase tracking-[0.25em] font-medium hover:bg-gold-light transition-colors duration-500"
             >
               Prenota un tavolo

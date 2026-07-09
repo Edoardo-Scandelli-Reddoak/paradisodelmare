@@ -87,7 +87,7 @@ export default function Navbar() {
 
         <div className="hidden lg:block">
           <Link
-            href="/#prenota"
+            href="/contatti#prenota"
             className={`group inline-flex items-center gap-2 px-6 py-3 rounded-full text-[12px] uppercase tracking-[0.2em] font-medium transition-all duration-500 ${
               scrolled
                 ? "bg-ink text-cream hover:bg-ink-700"
@@ -157,7 +157,7 @@ export default function Navbar() {
                 </MotionLink>
               ))}
               <MotionLink
-                href="/#prenota"
+                href="/contatti#prenota"
                 onClick={() => setOpen(false)}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}

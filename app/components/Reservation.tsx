@@ -89,7 +89,7 @@ export default function Reservation() {
           className="mt-8 md:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto max-w-sm sm:max-w-none"
         >
           <a
-            href="tel:+393932655783"
+            href="/contatti#prenota"
             className="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full bg-cream text-ink text-[12px] uppercase tracking-[0.25em] font-medium hover:bg-gold-light transition-colors duration-500"
           >
             Prenota ora

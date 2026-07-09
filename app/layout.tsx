@@ -16,9 +16,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Il Paradiso del Mare — Ristorante Pescheria",
+  title: "Il Paradiso del Mare — Ristorante di Pesce",
   description:
-    "Pescato del giorno, cucina di mare contemporanea. Una casa per chi ama il mare, dalla pescheria alla tavola.",
+    "Ristorante di pesce: pescato del giorno e cucina di mare contemporanea. Una casa per chi ama il mare, dal mare alla tavola.",
 };
 
 export const viewport: Viewport = {

@@ -44,19 +44,28 @@ export default function FishCounter() {
             del pesce fresco.
           </motion.h2>
 
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, delay: 0.35 }}
-            className="mt-5 md:mt-6 text-ink/80 text-base md:text-lg leading-relaxed font-light max-w-xl"
+            className="mt-5 md:mt-6 space-y-4 text-ink/80 text-base md:text-lg leading-relaxed font-light max-w-xl"
           >
-            Siamo prima di tutto una pescheria: ogni mattina il nostro banco si
-            riempie del pescato più fresco, selezionato con cura e disposto sul
-            ghiaccio. Crostacei, molluschi e pesce del giorno che puoi scegliere
-            con i tuoi occhi — da portare a casa o da gustare, cucinato al
-            momento, qui da noi.
-          </motion.p>
+            <p>
+              Al nostro banco il pesce è il primo protagonista: una selezione
+              fresca del giorno, esposta per raccontare la qualità e la cura con
+              cui scegliamo ogni materia prima.
+            </p>
+            <p>
+              Ogni mattina arrivano prodotti attentamente selezionati e
+              valorizzati dalla nostra cucina in proposte legate al pescato più
+              fresco del momento.
+            </p>
+            <p>
+              Una vetrina di mare che racconta, prima ancora dei piatti, la
+              freschezza e la stagionalità della nostra cucina.
+            </p>
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
