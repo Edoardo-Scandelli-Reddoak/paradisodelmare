@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Anton, Inter } from "next/font/google";
 import "./globals.css";
+import { SITE_URL, BUSINESS } from "./lib/site";
+import JsonLd from "./components/JsonLd";
 
 const anton = Anton({
   variable: "--font-anton",
@@ -16,9 +18,44 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Il Paradiso del Mare — Ristorante di Pesce",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Il Paradiso del Mare — Ristorante di Pesce a Muggiò",
+    template: "%s · Il Paradiso del Mare",
+  },
   description:
-    "Ristorante di pesce: pescato del giorno e cucina di mare contemporanea. Una casa per chi ama il mare, dal mare alla tavola.",
+    "Ristorante di pesce a Muggiò (MB): pescato del giorno, crudi, tartare e cucina di mare contemporanea. Dal mare alla tavola. Prenota il tuo tavolo.",
+  applicationName: BUSINESS.name,
+  keywords: [
+    "ristorante di pesce Muggiò",
+    "ristorante pesce Monza Brianza",
+    "cucina di mare",
+    "pescato del giorno",
+    "crudi di mare",
+    "tartare di pesce",
+    "gambero rosso",
+    "Il Paradiso del Mare",
+  ],
+  authors: [{ name: BUSINESS.name }],
+  creator: BUSINESS.name,
+  publisher: BUSINESS.name,
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  // Verifica Google Search Console: incolla qui il codice del meta tag
+  // fornito dalla console, oppure rimuovi se usi la verifica via DNS.
+  // verification: { google: "IL-TUO-CODICE-DI-VERIFICA" },
 };
 
 export const viewport: Viewport = {
@@ -39,6 +76,7 @@ export default function RootLayout({
       className={`${anton.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-cream text-ink">
+        <JsonLd />
         {children}
       </body>
     </html>

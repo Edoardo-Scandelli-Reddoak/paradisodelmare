@@ -5,9 +5,12 @@ import ContactHero from "../components/ContactHero";
 import ContactMain from "../components/ContactMain";
 
 export const metadata: Metadata = {
-  title: "Contatti · Il Paradiso del Mare",
+  title: "Contatti",
   description:
-    "Contatta Il Paradiso del Mare a Muggiò: indirizzo, telefono, email, orari di apertura e modulo di contatto. Vi aspettiamo.",
+    "Contatta Il Paradiso del Mare a Muggiò (MB): indirizzo in Via Trieste 23, telefono, email, orari di apertura, mappa e prenotazione online. Vi aspettiamo.",
+  alternates: {
+    canonical: "/contatti",
+  },
 };
 
 export default function ContattiPage() {

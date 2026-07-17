@@ -277,7 +277,7 @@ export default function DishesContent() {
               >
                 <Image
                   src={src}
-                  alt="Piatto del Paradiso del Mare"
+                  alt={`Piatto di pesce del Paradiso del Mare a Muggiò — ${i + 1}`}
                   fill
                   sizes="(min-width:1024px) 25vw, 50vw"
                   className="object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-105"

@@ -53,7 +53,7 @@ export default function Specialties() {
               <div className="relative aspect-[3/4] sm:aspect-[4/5] md:aspect-[5/4] overflow-hidden">
                 <Image
                   src={card.image}
-                  alt={card.title}
+                  alt={`${card.title} — Il Paradiso del Mare, Muggiò`}
                   fill
                   sizes="(min-width:768px) 45vw, 90vw"
                   className="object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-110"
@@ -66,9 +66,9 @@ export default function Specialties() {
 
                 {/* Bottom content — fixed structure so titles align across cards */}
                 <div className="absolute inset-x-0 bottom-0 p-5 md:p-10 flex flex-col">
-                  <h3 className="display text-cream text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.9]">
+                  <h2 className="display text-cream text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.9]">
                     {card.title}
-                  </h3>
+                  </h2>
                   <p className="mt-3 md:mt-4 text-cream/75 leading-relaxed font-light max-w-md text-sm md:text-base line-clamp-2">
                     {card.description}
                   </p>

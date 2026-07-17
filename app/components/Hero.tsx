@@ -28,7 +28,7 @@ export default function Hero() {
       >
         <Image
           src="/hero-0923.jpg"
-          alt="Piatto di mare contemporaneo"
+          alt="Piatto di pesce del ristorante Il Paradiso del Mare a Muggiò"
           fill
           priority
           sizes="100vw"
@@ -43,28 +43,30 @@ export default function Hero() {
         style={{ opacity }}
         className="relative z-10 h-full flex flex-col justify-end pb-16 md:pb-24 px-5 md:px-10 max-w-[1600px] mx-auto"
       >
-        {/* Big display heading with line reveals */}
-        <div className="overflow-hidden">
-          <motion.h1
-            initial={{ y: "110%" }}
-            animate={{ y: 0 }}
-            transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
-            className="display text-cream text-[16vw] md:text-[12vw] lg:text-[10vw] leading-[0.85]"
-          >
-            Dal mare
-          </motion.h1>
-        </div>
-        <div className="overflow-hidden mt-[-0.02em]">
-          <motion.h1
-            initial={{ y: "110%" }}
-            animate={{ y: 0 }}
-            transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.45 }}
-            className="display text-cream text-[16vw] md:text-[12vw] lg:text-[10vw] leading-[0.85]"
-          >
-            <span className="italic-fake inline-block">alla</span>{" "}
-            <span className="text-gold-light">tavola.</span>
-          </motion.h1>
-        </div>
+        {/* Big display heading with line reveals — un solo h1 per la SEO */}
+        <h1 className="display text-cream text-[16vw] md:text-[12vw] lg:text-[10vw] leading-[0.85]">
+          <span className="block overflow-hidden">
+            <motion.span
+              initial={{ y: "110%" }}
+              animate={{ y: 0 }}
+              transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.3 }}
+              className="block"
+            >
+              Dal mare
+            </motion.span>
+          </span>
+          <span className="block overflow-hidden mt-[-0.02em]">
+            <motion.span
+              initial={{ y: "110%" }}
+              animate={{ y: 0 }}
+              transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1], delay: 0.45 }}
+              className="block"
+            >
+              <span className="italic-fake inline-block">alla</span>{" "}
+              <span className="text-gold-light">tavola.</span>
+            </motion.span>
+          </span>
+        </h1>
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
