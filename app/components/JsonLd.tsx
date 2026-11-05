@@ -50,6 +50,7 @@ export default function JsonLd() {
     menu: `${SITE_URL}/menu.pdf`,
     hasMenu: [
       { "@type": "Menu", name: "Menu", url: `${SITE_URL}/menu.pdf` },
+      { "@type": "Menu", name: "Dolci", url: `${SITE_URL}/menu-dolci.pdf` },
       { "@type": "Menu", name: "Carta dei Vini", url: `${SITE_URL}/lista-vini.pdf` },
     ],
     sameAs: [BUSINESS.instagram, BUSINESS.facebook],

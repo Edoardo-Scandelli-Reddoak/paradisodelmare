@@ -17,17 +17,26 @@ const cards: MenuCard[] = [
     eyebrow: "La cucina",
     title: "Menu",
     description:
-      "Crudi, primi, secondi e dessert. La nostra carta cambia con il pescato del giorno e con le stagioni.",
+      "Plateau, crudi, primi e secondi: segue il pescato e le stagioni.",
     hint: "Sfoglia il menu (PDF)",
     href: "/menu.pdf",
     image: "/vini-0976.jpg",
   },
   {
+    eyebrow: "Il finale",
+    title: "Dolci",
+    description:
+      "Dolci e sorbetti, amari e distillati per chiudere il pasto.",
+    hint: "Sfoglia i dolci (PDF)",
+    href: "/menu-dolci.pdf",
+    image: "/piatto-0687.jpg",
+  },
+  {
     eyebrow: "La cantina",
     title: "Carta dei Vini",
     description:
-      "Bianchi minerali, bollicine e rossi eleganti: una selezione pensata per il mare.",
-    hint: "Sfoglia la lista vini (PDF)",
+      "Bianchi minerali, bollicine e rossi eleganti, pensati per il mare.",
+    hint: "Sfoglia i vini (PDF)",
     href: "/lista-vini.pdf",
     image: "/menu-0840.jpg",
   },
@@ -37,7 +46,7 @@ export default function Specialties() {
   return (
     <section id="menu" className="bg-ink py-14 md:py-20 relative grain">
       <div className="max-w-[1600px] mx-auto px-5 md:px-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 md:gap-10 lg:gap-6 xl:gap-10">
           {cards.map((card, i) => (
             <motion.a
               key={card.title}
@@ -50,12 +59,12 @@ export default function Specialties() {
               transition={{ duration: 0.9, delay: i * 0.1 }}
               className="group relative overflow-hidden rounded-sm bg-ink-700/30 border border-cream/10 block"
             >
-              <div className="relative aspect-[3/4] sm:aspect-[4/5] md:aspect-[5/4] overflow-hidden">
+              <div className="relative aspect-[3/4] sm:aspect-[4/5] md:aspect-[5/4] lg:aspect-[3/4] overflow-hidden">
                 <Image
                   src={card.image}
                   alt={`${card.title} — Il Paradiso del Mare, Muggiò`}
                   fill
-                  sizes="(min-width:768px) 45vw, 90vw"
+                  sizes="(min-width:1024px) 30vw, 90vw"
                   className="object-cover transition-transform duration-[1400ms] ease-out group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-ink/10" />
@@ -65,8 +74,8 @@ export default function Specialties() {
                 </span>
 
                 {/* Bottom content — fixed structure so titles align across cards */}
-                <div className="absolute inset-x-0 bottom-0 p-5 md:p-10 flex flex-col">
-                  <h2 className="display text-cream text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[0.9]">
+                <div className="absolute inset-x-0 bottom-0 p-5 md:p-10 lg:p-6 xl:p-10 flex flex-col">
+                  <h2 className="display text-cream text-4xl sm:text-5xl md:text-6xl lg:text-[min(3vw,3rem)] leading-[0.9]">
                     {card.title}
                   </h2>
                   <p className="mt-3 md:mt-4 text-cream/75 leading-relaxed font-light max-w-md text-sm md:text-base line-clamp-2">
